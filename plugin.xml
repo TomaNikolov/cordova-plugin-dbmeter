@@ -27,13 +27,11 @@
         <param name="ios-package" value="DBMeter" />
       </feature>
     </config-file>
-
+    <hook type="after_plugin_install" src="src/ios/hooks/add-legacy-swift-support.js"/>
     <source-file src="src/ios/DBMeter.swift" />
   </platform>
 
   <js-module src="dbmeter.js" name="DBMeter">
     <clobbers target="DBMeter" />
   </js-module>
-
-  <dependency id="cordova-plugin-add-swift-support" version="1.5.0"/>
 </plugin>
